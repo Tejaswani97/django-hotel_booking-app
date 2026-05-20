@@ -1,0 +1,13 @@
+<h2>Your Bookings</h2>
+
+{% for booking in bookings %}
+    <div>
+        <h3>{{ booking.hotel.name }}</h3>
+        <p>Check-in: {{ booking.check_in }}</p>
+        <p>Check-out: {{ booking.check_out }}</p>
+        <p>Rooms: {{ booking.rooms }}</p>
+        <p>Total Price: ₹{{ booking.total_price }}</p>
+    </div>
+{% empty %}
+    <p>No bookings yet.</p>
+{% endfor %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <h1>Find Your Hotel</h1>
+
+    <form method="get">
+        <input type="text" name="destination" placeholder="Enter city or destination" value="{{ request.GET.destination }}">
+        <input type="date" name="check_in">
+        <input type="date" name="check_out">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Hotels</h2>
+    <ul>
+        {% for hotel in hotels %}
+            <li>
+                <strong>{{ hotel.name }}</strong><br>
+                {{ hotel.address }}<br>
+                Rating: {{ hotel.rating }} ⭐<br>
+                Price per night: ₹{{ hotel.price_per_night }}<br>
+                Available rooms: {{ hotel.available_rooms }}<br>
+            </li>
+        {% empty %}
+            <li>No hotels found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

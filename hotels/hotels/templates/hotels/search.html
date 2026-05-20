@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Your Hotel</title>
+    <style>
+        .hotel-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .hotel-card img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .hotel-details {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Your Hotel</h1>
+    <form method="get">
+        <input type="text" name="destination" placeholder="Enter city or destination">
+        <input type="text" name="check_in" placeholder="dd-mm-yyyy">
+        <input type="text" name="check_out" placeholder="dd-mm-yyyy">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Hotels</h2>
+    {% for hotel in hotels %}
+    <div class="hotel-card">
+        {% if hotel.image %}
+            <img src="{{ hotel.image.url }}" alt="{{ hotel.name }}">
+        {% else %}
+            <img src="https://via.placeholder.com/200x150?text=No+Image" alt="No Image">
+        {% endif %}
+        <div class="hotel-details">
+            <h3>{{ hotel.name }}</h3>
+            <p>{{ hotel.address }}</p>
+            <p>Rating: {{ hotel.rating }} ⭐</p>
+            <p>Price per night: ₹{{ hotel.price_per_night }}</p>
+            <p>Available rooms: {{ hotel.available_rooms }}</p>
+        </div>
+    </div>
+    {% empty %}
+        <p>No hotels found.</p>
+    {% endfor %}
+</body>
+</html>
