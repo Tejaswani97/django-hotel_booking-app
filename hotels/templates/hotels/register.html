@@ -117,16 +117,40 @@
 <div class="register-container">
 
     <h2>Create Account</h2>
-
+    
     <form method="POST">
-        {% csrf_token %}
+    {% csrf_token %}
 
-        {{ form.as_p }}
+    {% for field in form %}
 
-        <button type="submit">
-            Register
-        </button>
-    </form>
+        <div style="margin-bottom:18px;">
+
+            <label style="display:block; margin-bottom:8px; font-weight:bold;">
+                {{ field.label }}
+            </label>
+
+            {{ field }}
+
+            {% if field.help_text %}
+                <small style="color:gray; display:block; margin-top:5px;">
+                    {{ field.help_text }}
+                </small>
+            {% endif %}
+
+            {% for error in field.errors %}
+                <p style="color:red; margin-top:5px;">
+                    {{ error }}
+                </p>
+            {% endfor %}
+
+        </div>
+
+    {% endfor %}
+
+    <button type="submit">
+        Register
+    </button>
+</form>
 
     <div class="login-link">
         Already have an account?
