@@ -4,7 +4,9 @@ from datetime import datetime
 from django.contrib.auth import logout
 # 🔐 AUTH IMPORTS
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib.auth import login
+from .forms import RegisterForm
+from django.shortcuts import render, redirect
 
 # 🔹 LOGIN VIEW (FIRST PAGE)
 def login_view(request):
@@ -107,3 +109,16 @@ def book_hotel(request, hotel_id):
 def logout_view(request):
     logout(request)
     return redirect('login')  # goes back to login page
+def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('/')
+
+    else:
+        form = RegisterForm()
+
+    return render(request, 'hotels/register.html', {'form': form})
