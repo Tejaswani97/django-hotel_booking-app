@@ -43,8 +43,7 @@ def logout_view(request):
 # 🔹 HOME PAGE (SEARCH + BOOKING HISTORY)
 def home(request):
     # 🔒 FORCE LOGIN
-    if not request.user.is_authenticated:
-        return redirect('login')
+    
 
     query = request.GET.get("q", "")
 
@@ -55,8 +54,10 @@ def home(request):
         hotels = Hotel.objects.all()
 
     # 📌 BOOKING HISTORY
-    bookings = Booking.objects.filter(user=request.user).order_by("-created_at")
+    bookings = []
 
+    if request.user.is_authenticated:
+       bookings = Booking.objects.filter(user=request.user).order_by("-created_at")
     return render(request, "hotels/home.html", {
         "hotels": hotels,
         "query": query,
