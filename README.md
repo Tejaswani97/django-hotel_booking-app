@@ -5,11 +5,31 @@ A full-stack Hotel Booking Web Application built using Django that allows users 
 https://django-hotel-booking-app.onrender.com
 
 📌 Features
- -> User registration and login system
- -> Browse available hotels
- -> View detailed hotel information
- -> Book rooms online
- -> Admin panel to manage hotels and bookings
- -> Secure authentication system
- -> Responsive UI for better user experience
+ 🔐 User Authentication
+- 📝 User Registration (Sign Up)
+- 🔑 Secure Login
+- 🚪 Logout Functionality
+- 🔒 Password Validation
+- 👨‍💼 Admin Authentication
+
+### 🏨 Hotel Management
+- 📋 View Available Hotels
+- 🖼️ Hotel Images & Details
+- 📍 Hotel Address Information
+- 💰 Price Per Night Display
+- 🔍 Search Hotels by Name
+
+### 📅 Booking System
+- 🛏️ Book Hotel Rooms
+- 📆 Select Check-In & Check-Out Dates
+- 🚪 Choose Number of Rooms
+- 💵 Automatic Total Price Calculation
+- 📜 View Booking History
+
+### 👨‍💻 Admin Dashboard
+- ➕ Add Hotels
+- ✏️ Update Hotel Information
+- 🖼️ Upload Hotel Images
+- 📊 Manage Bookings
+- 👥 Manage Users
 
