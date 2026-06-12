@@ -32,4 +32,17 @@ https://django-hotel-booking-app.onrender.com
 - 🖼️ Upload Hotel Images
 - 📊 Manage Bookings
 - 👥 Manage Users
+  
+## 🛠️ Tech Stack
 
+### Backend ⚙️
+- 🐍 Python
+- 🌐 Django
+
+### Frontend 🎨
+- 🧱 HTML5
+- 🎨 CSS3
+- ⚡ JavaScript
+
+### Database 🗄️
+- SQLite
