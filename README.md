@@ -46,3 +46,26 @@ https://django-hotel-booking-app.onrender.com
 
 ### Database 🗄️
 - SQLite
+### Deployment ☁️
+- Render
+
+## 📂 Project Structure
+
+```text
+hotel_booking/
+│
+├── hotels/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+│   ├── admin.py
+│   └── templates/
+│
+├── hotel_booking/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── media/
+├── manage.py
