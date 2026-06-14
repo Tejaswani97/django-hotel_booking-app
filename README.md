@@ -69,3 +69,13 @@ hotel_booking/
 │
 ├── media/
 ├── manage.py
+
+## ✨ Future Enhancements
+
+- 🌍 Filter Hotels by Location
+- ⭐ Hotel Reviews & Ratings
+- 💳 Online Payment Integration
+- 📧 Email Booking Confirmation
+- 👤 User Profile Management
+- 🛏️ Room Availability Tracking
+- 📱 Fully Responsive Design
