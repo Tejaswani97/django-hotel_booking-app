@@ -79,3 +79,14 @@ hotel_booking/
 - 👤 User Profile Management
 - 🛏️ Room Availability Tracking
 - 📱 Fully Responsive Design
+
+## 🎯 Learning Outcomes
+
+Through this project I practiced:
+
+- 🐍 Django Development
+- 🔐 Authentication & Authorization
+- 🗄️ Database Management
+- 🎨 Frontend Integration
+- ☁️ Deployment on Render
+- 🌐 Full-Stack Web Development
