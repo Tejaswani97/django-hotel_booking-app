@@ -12,14 +12,14 @@ https://django-hotel-booking-app.onrender.com
 - 🔒 Password Validation
 - 👨‍💼 Admin Authentication
 
-### 🏨 Hotel Management
+## 🏨 Hotel Management
 - 📋 View Available Hotels
 - 🖼️ Hotel Images & Details
 - 📍 Hotel Address Information
 - 💰 Price Per Night Display
 - 🔍 Search Hotels by Name
 
-### 📅 Booking System
+## 📅 Booking System
 - 🛏️ Book Hotel Rooms
 - 📆 Select Check-In & Check-Out Dates
 - 🚪 Choose Number of Rooms
